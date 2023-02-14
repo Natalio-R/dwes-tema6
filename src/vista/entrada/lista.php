@@ -21,7 +21,7 @@ if (!empty($datosParaVista['datos'])) {
 
     echo <<<END
     <div class="p-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-      <img class="rounded-lg" style="height:300px" src="$imagen" alt="Imagen publicación">
+      <img class="rounded-lg" style="height:306px" src="$imagen" alt="Imagen publicación">
       <div class="my-5">
         <p class="mt-3 font-normal text-gray-900 font-bold">Descripción</p>
         <p class="mb-3 font-normal text-gray-700">$texto</p>

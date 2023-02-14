@@ -60,7 +60,9 @@ class EntradaControlador extends Controlador
         $id = $_GET && isset($_GET['id']) ? htmlspecialchars($_GET['id']) : null;
 
         if ($id !== null) {
-            if ($sesion->getId() == EntradaBd::getEntrada($id)->getAutor()) {
+            $existeEntrada = EntradaBd::getEntrada($_GET['id']) ? true : false;
+
+            if ($sesion->getId() == EntradaBd::getEntrada($id)->getAutor() && $existeEntrada !== false) {
                 return EntradaBd::eliminar($id);
             } else {
                 return false;
